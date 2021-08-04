@@ -1,19 +1,24 @@
 package com.crudapp.main.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
+@Table(name="person")
 public class Person {
 	private Integer id;
 	private String personname;
 	private String password;
 	private String email;
 	
-	public Person() {
+//	@OneToMany(mappedBy="person",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+//	private List<Department> dept; 
+        public Person() {
 		
 	}
 
